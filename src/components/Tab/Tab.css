@@ -1,0 +1,17 @@
+.tab-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.btn {
+  background: none;
+  color: inherit;
+  border: 1px solid #9e9e9e;
+  padding: 1px 2px;
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin-left: 10px;
+}

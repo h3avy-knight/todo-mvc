@@ -21,16 +21,6 @@ body {
   color: rgba(0, 0, 0, 0.2);
 }
 
-/* .todoapp h1 {
-  position: absolute;
-  top: -140px;
-  width: 100%;
-  font-size: 100px;
-  font-weight: lighter;
-  text-align: center;
-  opacity: 0.3;
-  color: #d8acac;
-} */
 .todo-header {
   font-size: 100px;
   font-weight: lighter;
@@ -50,8 +40,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
   font-weight: lighter;
   padding: 6px;
-  /* border: 1px solid #999; */
-  /* box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2); */
+
   box-sizing: border-box;
   border: none;
 }
@@ -64,21 +53,15 @@ body {
 .table {
   display: flex;
   align-items: center;
-  /* margin-left: 10px; */
 }
 .table-input {
   font-size: 20px;
+
   font-weight: 300;
   margin-left: 30px;
   color: #999;
 }
 
-/* .show-items i {
-  color: #b83f45;
-  opacity: 0.4;
-  font-size: 30px;
-  font-weight: 100;
-} */
 .down-icon {
   font-size: 25px;
   color: grey;
@@ -90,34 +73,6 @@ body {
 .icon-container {
   padding: 10px;
 }
-/* .table-input:hover i {
-  opacity: 1;
-} */
-/* input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  height: 30px;
-  width: 30px;
-  display: block;
-  border-radius: 50%;
-  border: 1px solid #999;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  outline: none;
-} */
-/* input[type="checkbox"]::after { */
-/* font-family: "Font Awsome 5 free"; */
-/* font-weight: 900; */
-/* font-size: 30px; */
-/* color: lightgreen; */
-/* content: "\f00c"; */
-/* } */
-
-/* input[type="checkbox"]:checked {
-  background-color: #fff;
-} */
-/* input[type="checkbox"]:checked:after {
-  display: inline-block;
-} */
+.table-input {
+  width: 100%;
+}

@@ -4,12 +4,19 @@
   justify-content: space-between;
   padding: 0 20px;
 }
+.show-items:hover .delete {
+  display: block;
+}
+
 .table {
   display: flex;
   align-items: center;
-  /* margin-left: 10px; */
 }
-.show-items .delete {
+.show-items {
+  border-top: 1px solid rgb(236, 234, 234);
+}
+.delete {
+  display: none;
   color: #b95156;
   opacity: 0.4;
   font-size: 30px;
@@ -19,31 +26,27 @@
 }
 .table-input {
   font-size: 20px;
+  width: 100%;
   font-weight: 300;
   margin-left: 30px;
   color: #999;
 }
 .checkbox-round {
-  width: 35px;
-  height: 35px;
+  width: 70px;
+  height: 30px;
   background-color: white;
   border-radius: 50%;
-  vertical-align: middle;
   border: 1px solid #ddd;
   appearance: none;
-  /* -webkit-appearance: none; */
   outline: none;
-  /* cursor: pointer; */
   position: relative;
 }
 .checkbox-round:checked {
-  /* display: flex;
-  justify-content: center; */
   background-image: url("./check/logo.svg");
-  height: 35px;
+  height: 30px;
+  width: 70px;
+  left: 0 !important;
   background-position: center;
-  /* background-size: 35px 35px; */
-  /* align-items: center; */
+  background-size: 35px 35px;
   background-repeat: no-repeat;
-  width: 35px;
 }

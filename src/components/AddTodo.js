@@ -3,23 +3,12 @@ import React, { useEffect, useState } from "react";
 import ListResult from "./ListResult";
 
 const AddTodo = () => {
-  // const getData = () => {
-  //   let list = localStorage.getItem("todos");
-  //   if (list) {
-  //     return JSON.parse(localStorage.getItem("list"));
-  //   } else {
-  //     return [];
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   localStorage.setItem("todos", JSON.stringify(items));
-  // }, [items]);
+  const todos = localStorage.getItem("react-todo");
 
   useEffect(() => {
-    const todos = localStorage.getItem("react-todo");
     if (todos && todos.length) {
       setItems(JSON.parse(todos));
+      setInitialItems(JSON.parse(todos));
     }
   }, []);
 
@@ -28,8 +17,11 @@ const AddTodo = () => {
   const [initialItems, setInitialItems] = useState([]);
   const [isSelectAll, setIsSelectAll] = useState(false);
 
+  const handleItemEdit = (e, index) => {
+    console.log(e, index);
+  };
+
   const handleChange = (e) => {
-    // console.log(e.target.value);
     setValue(e.target.value);
   };
   const handleClearCompleted = () => {
@@ -50,26 +42,20 @@ const AddTodo = () => {
   };
 
   const handleTabClick = (type) => {
-    // console.log("type", type);
     switch (type) {
       case "all":
-        // console.log(items);
         setItems([...initialItems]);
         break;
       case "active":
         const activeItems = initialItems.filter(
           (item) => item.checked === false
         );
-        // setInitialItems([...items]);
-        // console.log(activeItems);
         setItems([...activeItems]);
         break;
       case "completed":
         const completdItems = initialItems.filter(
           (item) => item.checked === true
         );
-        // console.log(completdItems);
-        // setInitialItems([...items]);
         setItems([...completdItems]);
         break;
       default:
@@ -124,7 +110,7 @@ const AddTodo = () => {
         item.checked = true;
         return item;
       });
-      // console.log("selectedItems", selectedItems);
+
       setIsSelectAll(true);
     } else {
       selectedItems = items.map((item) => {
@@ -145,7 +131,9 @@ const AddTodo = () => {
         <div>
           <div className="input-container">
             <div className="icon-container" onClick={toggleSelectAll}>
-              <i className={`fas fa-chevron-down down-icon`}></i>
+              {items.length !== 0 && (
+                <i className={`fas fa-chevron-down down-icon`} />
+              )}
             </div>
             <input
               type="text"
@@ -164,7 +152,10 @@ const AddTodo = () => {
           deleteRow={deleteRow}
           handleSelect={handleSelect}
           handleTabClick={handleTabClick}
+          handleEdit={handleItemEdit}
+          editableIndex={1}
           handleClearCompleted={handleClearCompleted}
+          showTab={!!initialItems.length}
         />
       </div>
     </div>

@@ -1,14 +1,13 @@
 .tab-container {
   border-top: 1px solid rgb(209, 200, 200);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 12px;
 }
 .btn {
   background: none;
-  color: inherit;
+  color: #9e9e9e;
   border: 1px solid #9e9e9e;
   padding: 1px 2px;
   border-radius: 4px;
@@ -16,4 +15,13 @@
   cursor: pointer;
   outline: inherit;
   margin-left: 10px;
+}
+
+.clear-container {
+  border: none;
+  color: #9e9e9e;
+  background: white;
+}
+.clear-container:hover {
+  text-decoration: underline;
 }

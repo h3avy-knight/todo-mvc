@@ -15,7 +15,7 @@ const Tab = ({ remainingTodo, handleTabClick, handleClearCompleted }) => {
         </button>
       </div>
       <button className="clear-container" onClick={handleClearCompleted}>
-        Clear completd
+        Clear completed
       </button>
     </div>
   );
